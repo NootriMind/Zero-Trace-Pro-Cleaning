@@ -32,107 +32,77 @@ h2{font-weight:800;font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-0.02em}
 h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:inline-block}
 
-/* === LOGO COMPONENT (matches brand identity exactly) === */
-.logo{display:flex;flex-direction:column;align-items:center}
-.logo-wordmark{font-family:'Montserrat',sans-serif;font-weight:900;line-height:1;display:flex;align-items:baseline}
-.logo-wordmark .zero{color:var(--blue);letter-spacing:-0.02em;margin-right:14px}
-.logo-wordmark .trace{color:var(--black);letter-spacing:-0.02em}
-.logo-procleaning{display:flex;align-items:center;gap:14px;width:100%;justify-content:center;margin-top:5px}
-.logo-procleaning-line{flex:1;height:2px;background:var(--blue);max-width:70px}
-.logo-procleaning-text{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--black)}
-.logo-tagline{font-family:'Montserrat',sans-serif;font-weight:400;font-style:italic;letter-spacing:0.08em;color:var(--slate);margin-top:10px}
-
-/* Nav logo size */
-.logo-nav .logo-wordmark{font-size:1.45rem}
-.logo-nav .logo-wordmark .zero{margin-right:8px}
-.logo-nav .logo-procleaning{margin-top:2px;gap:8px;max-width:200px}
-.logo-nav .logo-procleaning-line{max-width:30px;height:1.5px}
-.logo-nav .logo-procleaning-text{font-size:6.5px;letter-spacing:.22em}
-.logo-nav .logo-tagline{display:none}
-
-/* Dark variant */
-.logo-dark .logo-wordmark .zero{color:var(--blue)}
-.logo-dark .logo-wordmark .trace{color:var(--white)}
-.logo-dark .logo-procleaning-text{color:var(--white)}
-.logo-dark .logo-procleaning-line{background:var(--blue)}
-.logo-dark .logo-tagline{color:rgba(255,255,255,.5)}
-
-/* Light variant — BOTH words blue per the brand image */
-.logo-light .logo-wordmark .zero{color:var(--blue)}
-.logo-light .logo-wordmark .trace{color:var(--blue)}
-.logo-light .logo-procleaning-text{color:var(--black)}
-.logo-light .logo-procleaning-line{background:var(--blue)}
-.logo-light .logo-tagline{color:var(--slate)}
-
 /* === BUTTONS === */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.04em;padding:17px 38px;border-radius:8px;transition:all .3s}
 .btn-blue{background:var(--blue);color:var(--white)}.btn-blue:hover{background:var(--deep);transform:translateY(-2px);box-shadow:0 10px 35px rgba(27,101,206,.35)}
-.btn-ghost{border:2px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8)}.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+.btn-dark{background:var(--black);color:var(--white)}.btn-dark:hover{background:#222;transform:translateY(-2px);box-shadow:0 10px 35px rgba(0,0,0,.25)}
+.btn-outline{border:2px solid var(--black);color:var(--black)}.btn-outline:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
 .btn-white{background:var(--white);color:var(--blue);font-weight:800}.btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(0,0,0,.15)}
 .btn-sm{padding:13px 30px;font-size:.78rem}
 
 /* === NAV === */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .4s;padding:18px 0}
-.nav.scrolled{background:rgba(237,233,225,.97);box-shadow:0 1px 30px rgba(0,0,0,.06);padding:12px 0;backdrop-filter:blur(24px)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .4s;padding:20px 0;background:rgba(237,233,225,.95);backdrop-filter:blur(20px)}
+.nav.scrolled{box-shadow:0 1px 30px rgba(0,0,0,.06);padding:10px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
 
-/* Nav logo color states */
-.nav .logo-wordmark .trace{color:var(--white);transition:color .4s}
-.nav.scrolled .logo-wordmark .trace{color:var(--blue)}
-.nav .logo-procleaning-text{color:rgba(255,255,255,.6);transition:color .4s}
-.nav.scrolled .logo-procleaning-text{color:var(--black)}
-.nav .logo-procleaning-line{background:rgba(255,255,255,.2);transition:background .4s}
-.nav.scrolled .logo-procleaning-line{background:var(--blue)}
+/* NAV LOGO — Large, with TM, matching brand identity exactly */
+.nav-logo{display:flex;flex-direction:column;align-items:flex-start}
+.nav-wm{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.8rem;line-height:1;display:flex;align-items:baseline;letter-spacing:-0.02em}
+.nav-wm .zr{color:var(--blue);margin-right:10px}
+.nav-wm .tr{color:var(--black)}
+.nav-wm .tm{font-size:0.35em;font-weight:600;color:#444;letter-spacing:.02em;margin-left:1px;display:inline-block;vertical-align:baseline;position:relative;top:-1.3em}
+.nav-pro{display:flex;align-items:center;gap:8px;margin-top:2px;max-width:240px;width:100%}
+.nav-pro-line{flex:1;height:1.5px;background:var(--blue);max-width:40px}
+.nav-pro-text{font-family:'Montserrat',sans-serif;font-weight:700;font-size:7px;letter-spacing:.25em;text-transform:uppercase;color:var(--black)}
 
-.nav-links{display:flex;align-items:center;gap:38px;list-style:none}
-.nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.03em;color:rgba(255,255,255,.7);transition:all .3s}
-.nav-links a:hover{color:var(--white)}
-.nav.scrolled .nav-links a{color:var(--slate)}.nav.scrolled .nav-links a:hover{color:var(--black)}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.03em;color:var(--slate);transition:all .3s}
+.nav-links a:hover{color:var(--black)}
 .nav-cta{padding:11px 26px;border-radius:7px;background:var(--blue);color:var(--white)!important;font-weight:700;font-size:.75rem;letter-spacing:.04em;transition:all .3s}
 .nav-cta:hover{background:var(--deep)!important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(27,101,206,.3)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.nav-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
-.nav.scrolled .nav-toggle span{background:var(--black)}
+.nav-toggle span{width:24px;height:2px;background:var(--black);border-radius:2px;transition:all .3s}
 
-/* === HERO === */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--dark);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 50%,rgba(27,101,206,.15) 0%,transparent 55%),radial-gradient(ellipse at 85% 20%,rgba(74,144,217,.08) 0%,transparent 45%)}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,var(--offwhite),transparent);z-index:3;pointer-events:none}
-.hero-content{position:relative;z-index:4;max-width:700px;padding:150px 0 130px}
-.hero-pre{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sky);margin-bottom:28px;display:flex;align-items:center;gap:14px}
+/* === HERO — LIGHT VERSION === */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--offwhite);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(27,101,206,.06) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(74,144,217,.04) 0%,transparent 40%)}
+.hero-content{position:relative;z-index:4;max-width:680px;padding:160px 0 120px}
+.hero-pre{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:28px;display:flex;align-items:center;gap:14px}
 .hero-pre::before{content:'';width:44px;height:2px;background:var(--blue)}
-.hero h1{color:var(--white);margin-bottom:16px}
-.hero h1 em{font-style:italic;color:var(--sky)}
+.hero h1{color:var(--black);margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--blue)}
 .hero-tagline{display:flex;align-items:center;gap:18px;margin-bottom:36px}
 .hero-tagline .tl-line{width:50px;height:2px;background:var(--blue)}
-.hero-tagline span{font-family:'Montserrat',sans-serif;font-weight:400;font-style:italic;font-size:1.25rem;letter-spacing:.08em;color:var(--sky)}
-.hero-desc{font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:540px}
+.hero-tagline span{font-family:'Montserrat',sans-serif;font-weight:400;font-style:italic;font-size:1.25rem;letter-spacing:.08em;color:var(--slate)}
+.hero-desc{font-size:1.05rem;line-height:1.85;color:var(--slate);margin-bottom:44px;max-width:540px}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:72px}
 .hero-trust{display:flex;gap:36px;flex-wrap:wrap}
 .hero-trust-item{display:flex;align-items:center;gap:10px}
 .trust-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
-.hero-trust-text{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.02em}
-.hero-deco{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:550px;height:550px;border-radius:50%;border:1px solid rgba(27,101,206,.06);z-index:1}
-.hero-deco::before{content:'';position:absolute;inset:70px;border-radius:50%;border:1px solid rgba(27,101,206,.05)}
+.hero-trust-text{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;color:var(--slate);letter-spacing:.02em}
+.hero-deco{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:520px;height:520px;border-radius:50%;border:1px solid rgba(27,101,206,.08);z-index:1}
+.hero-deco::before{content:'';position:absolute;inset:70px;border-radius:50%;border:1px solid rgba(27,101,206,.06)}
 .hero-deco::after{content:'';position:absolute;inset:140px;border-radius:50%;border:1px solid rgba(27,101,206,.04)}
+.hero-accent{display:none}
 
 /* === SECTION BASE === */
 .sec-light{padding:120px 0;background:var(--offwhite)}
-.sec-warm{padding:120px 0;background:var(--cream)}
+.sec-white{padding:120px 0;background:var(--white)}
 .sec-dark{padding:120px 0;background:var(--dark);position:relative;overflow:hidden}
 .sec-dark::before{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:radial-gradient(ellipse at center,rgba(27,101,206,.06) 0%,transparent 70%)}
 .sec-blue{padding:100px 0;background:var(--blue);text-align:center;position:relative;overflow:hidden}
 .sec-blue::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 100%,rgba(20,79,160,.5) 0%,transparent 50%),radial-gradient(ellipse at 70% 0%,rgba(74,144,217,.25) 0%,transparent 50%)}
 .sec-blue>*{position:relative;z-index:2}
+.sec-cream{padding:120px 0;background:var(--cream)}
 
 /* === SERVICES === */
 .sec-header{text-align:center;max-width:580px;margin:0 auto 70px}
 .sec-header p{margin-top:16px;font-size:1rem}
 .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.scard{background:var(--white);border-radius:16px;padding:42px 34px;transition:all .35s;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.04)}
+.scard{background:var(--offwhite);border-radius:16px;padding:42px 34px;transition:all .35s;position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.06)}
 .scard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--sky));transform:scaleX(0);transition:transform .4s}
 .scard:hover{transform:translateY(-6px);box-shadow:0 16px 50px rgba(0,0,0,.08);border-color:transparent}.scard:hover::after{transform:scaleX(1)}
-.scard-ic{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(27,101,206,.1),rgba(74,144,217,.06));display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.scard-ic{width:52px;height:52px;border-radius:12px;background:var(--white);display:flex;align-items:center;justify-content:center;margin-bottom:24px;border:1px solid rgba(0,0,0,.04)}
 .scard-ic svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8}
 .scard h3{margin-bottom:10px}.scard p{font-size:.88rem;line-height:1.7}
 .scard .lm{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.06em;color:var(--blue);text-transform:uppercase}
@@ -216,12 +186,14 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 /* === FOOTER === */
 .footer{background:var(--dark);padding:72px 0 36px}
 .ft-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:52px;flex-wrap:wrap;gap:40px}
-.footer .logo-wordmark{font-size:1.6rem}
-.footer .logo-wordmark .zero{margin-right:10px}
-.footer .logo-procleaning{gap:10px;max-width:260px;margin-top:4px}
-.footer .logo-procleaning-line{max-width:40px}
-.footer .logo-procleaning-text{font-size:8px}
-.footer .logo-tagline{font-size:10px;margin-top:8px}
+.ft-logo .logo-wordmark{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.6rem;line-height:1;display:flex;align-items:baseline;letter-spacing:-0.02em}
+.ft-logo .logo-wordmark .zero{color:var(--blue);margin-right:10px}
+.ft-logo .logo-wordmark .trace{color:var(--white)}
+.ft-logo .logo-wordmark .tm{font-size:0.35em;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.02em;margin-left:1px;display:inline-block;vertical-align:baseline;position:relative;top:-1.3em}
+.ft-logo .logo-procleaning{display:flex;align-items:center;gap:10px;margin-top:4px;max-width:260px}
+.ft-logo .logo-procleaning-line{flex:1;height:1.5px;background:var(--blue);max-width:40px}
+.ft-logo .logo-procleaning-text{font-family:'Montserrat',sans-serif;font-weight:700;font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--white)}
+.ft-logo .logo-tagline{font-family:'Montserrat',sans-serif;font-weight:400;font-style:italic;font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-top:10px}
 .ft-links{display:flex;gap:56px}
 .ft-col h5{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin-bottom:18px}
 .ft-col a{display:block;font-size:.84rem;color:rgba(255,255,255,.4);margin-bottom:11px;transition:color .3s}.ft-col a:hover{color:var(--white)}
@@ -247,9 +219,10 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
   .nav-links.open .nav-cta{margin-top:16px;text-align:center;display:block;border-radius:8px}
   .hero-content{padding:130px 0 100px}.hero h1{font-size:2.1rem}
   .hero-trust{gap:16px}.hero-tagline span{font-size:1rem}
+  .nav-wm{font-size:1.4rem}
   .sgrid,.wgrid{grid-template-columns:1fr}.about-lay,.contact-lay{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}.ft-links{gap:32px;flex-wrap:wrap}.jlist{grid-template-columns:1fr}
-  .sec-light,.sec-warm,.sec-dark{padding:80px 0}.sec-blue{padding:70px 0}
+  .sec-light,.sec-white,.sec-dark,.sec-cream{padding:80px 0}.sec-blue{padding:70px 0}
 }
 </style>
 </head>
@@ -259,10 +232,8 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 <nav class="nav" id="nb">
 <div class="container"><div class="nav-inner">
   <a href="#" class="nav-logo">
-    <div class="logo logo-nav">
-      <div class="logo-wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span></div>
-      <div class="logo-procleaning"><div class="logo-procleaning-line"></div><span class="logo-procleaning-text">PRO CLEANING</span><div class="logo-procleaning-line"></div></div>
-    </div>
+    <div class="nav-wm"><span class="zr">ZERO</span><span class="tr">TRACE</span><span class="tm">™</span></div>
+    <div class="nav-pro"><div class="nav-pro-line"></div><span class="nav-pro-text">PRO CLEANING</span><div class="nav-pro-line"></div></div>
   </a>
   <ul class="nav-links" id="nl">
     <li><a href="#services">Services</a></li>
@@ -278,6 +249,7 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-deco"></div>
+<div class="hero-accent"></div>
 <div class="container"><div class="hero-content">
   <div class="hero-pre">Indianapolis Commercial Cleaning</div>
   <h1>Professional Clean.<br>Zero Trace.<br><em>Every Time.</em></h1>
@@ -285,7 +257,7 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
   <p class="hero-desc">Reliable, detail-driven, and eco-friendly commercial cleaning services for medical facilities, offices, and businesses across Indianapolis. Your facility is in capable hands.</p>
   <div class="hero-actions">
     <a href="#contact" class="btn btn-blue">Request a Free Quote</a>
-    <a href="#services" class="btn btn-ghost">Our Services</a>
+    <a href="#services" class="btn btn-outline">Our Services</a>
   </div>
   <div class="hero-trust">
     <div class="hero-trust-item"><div class="trust-dot"></div><span class="hero-trust-text">Bonded &amp; Insured</span></div>
@@ -297,7 +269,7 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 </section>
 
 <!-- SERVICES -->
-<section class="sec-light" id="services">
+<section class="sec-white" id="services">
 <div class="container">
   <div class="sec-header fade-up"><span class="label">Our Services</span><h2>Commercial Cleaning Done Right</h2><p>From daily janitorial to specialized medical facility cleaning, we deliver spotless results with eco-friendly products safe for your staff and facility.</p></div>
   <div class="sgrid">
@@ -361,10 +333,10 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 </section>
 
 <!-- ABOUT -->
-<section class="sec-warm" id="about">
+<section class="sec-cream" id="about">
 <div class="container"><div class="about-lay">
   <div class="about-photo-wrap fade-up">
-    <div class="about-photo"><img src="images/zena-miller.png" alt="Zena Miller, founder of Zero Trace Pro Cleaning" loading="lazy"></div>
+    <div class="about-photo"><img src="zena-miller.PNG" alt="Zena Miller, founder of Zero Trace Pro Cleaning" loading="lazy"></div>
     <div class="about-accent"></div>
   </div>
   <div class="about-content fade-up d2">
@@ -412,7 +384,7 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 </section>
 
 <!-- CONTACT -->
-<section class="sec-warm" id="contact">
+<section class="sec-cream" id="contact">
 <div class="container"><div class="contact-lay">
   <div class="contact-info fade-up">
     <span class="label">Contact Us</span>
@@ -442,12 +414,10 @@ h3{font-weight:700;font-size:clamp(1.1rem,2vw,1.35rem)}
 <footer class="footer">
 <div class="container">
   <div class="ft-top">
-    <div>
-      <div class="logo logo-dark">
-        <div class="logo-wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span></div>
-        <div class="logo-procleaning"><div class="logo-procleaning-line"></div><span class="logo-procleaning-text">PRO CLEANING</span><div class="logo-procleaning-line"></div></div>
-        <div class="logo-tagline">keeping it spotless</div>
-      </div>
+    <div class="ft-logo">
+      <div class="logo-wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">™</span></div>
+      <div class="logo-procleaning"><div class="logo-procleaning-line"></div><span class="logo-procleaning-text">PRO CLEANING</span><div class="logo-procleaning-line"></div></div>
+      <div class="logo-tagline">keeping it spotless</div>
     </div>
     <div class="ft-links">
       <div class="ft-col"><h5>Services</h5><a href="#services">Office Cleaning</a><a href="#medical">Medical Cleaning</a><a href="#services">Deep Cleaning</a><a href="#services">Janitorial</a><a href="#services">Post-Construction</a></div>
