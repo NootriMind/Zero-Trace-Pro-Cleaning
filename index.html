@@ -679,3 +679,14 @@ document.getElementById('qf').addEventListener('submit',function(e){
 </script>
 </body>
 </html>
+}
+document.getElementById('qf').addEventListener('submit',function(e){
+  const btn=this.querySelector('.form-submit');
+  const status=document.getElementById('form-status');
+  btn.textContent='Sending...';
+  status.textContent='';
+  setTimeout(()=>{status.style.color='var(--green)';status.textContent='Thank you! We\'ll be in touch within 24 hours.';btn.textContent='Submit Quote Request';},1500);
+});
+</script>
+</body>
+</html>
