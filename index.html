@@ -56,15 +56,15 @@ a{text-decoration:none;color:inherit}
 .nav::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);backdrop-filter:blur(0px);transition:all .4s;z-index:-1}
 .nav.scrolled::before{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.07)}
 .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1160px;margin:0 auto}
-.logo{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none}
+.logo{display:flex;flex-direction:column;align-items:center;text-decoration:none}
 .logo-top{display:flex;align-items:flex-start;gap:0}
 .logo-zero{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.55rem;color:var(--blue);letter-spacing:.02em;line-height:1;margin-right:6px}
 .logo-trace{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.55rem;color:var(--white);letter-spacing:.02em;line-height:1;transition:color .4s;position:relative;display:inline-block}
 .logo-tm{font-family:'Montserrat',sans-serif;font-size:.48rem;font-weight:700;color:rgba(255,255,255,.4);line-height:1;align-self:flex-start;margin-top:0;margin-left:1px;transition:color .4s}
 .nav.scrolled .logo-trace{color:var(--black)}
 .nav.scrolled .logo-tm{color:rgba(0,0,0,.3)}
-.logo-sub{display:flex;align-items:center;gap:7px;margin-top:3px;width:100%}
-.logo-sub-line{width:22px;flex:none;height:1.5px;background:var(--blue)}
+.logo-sub{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:3px;width:100%}
+.logo-sub-line{width:28px;flex:none;height:1.5px;background:var(--blue)}
 .logo-sub-text{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .4s}
 .nav.scrolled .logo-sub-text{color:var(--slate)}
 .nav-links{display:flex;align-items:center;gap:36px;list-style:none}
