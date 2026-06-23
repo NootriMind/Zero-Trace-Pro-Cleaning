@@ -512,6 +512,8 @@ document.querySelectorAll('.fade-up').forEach(el=>el.classList.add('waiting'));
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.remove('waiting');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 
+</script>
+
 <script src="https://formgrid.dev/embed.js" async></script>
 </body>
 </html>
