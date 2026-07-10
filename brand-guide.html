@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Trace Pro Cleaning — Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#1B65CE;
+  --deep:#144FA0;
+  --sky:#4A90D9;
+  --ink:#12181D;
+  --paper:#F4F6F8;
+  --paper-alt:#EAEEF2;
+  --dark:#0a1628;
+  --muted:#4B565E;
+  --line:rgba(18,24,29,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;color:var(--muted);background:var(--paper);line-height:1.7}
+.wrap{max-width:900px;margin:0 auto;padding:72px 40px 100px}
+h1,h2,h3{font-family:'Montserrat',sans-serif;color:var(--ink);line-height:1.1}
+
+/* ===== COVER ===== */
+.cover{background:var(--dark);padding:100px 0;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 500px at 85% -10%,rgba(74,144,217,.16),transparent 60%)}
+.cover .wrap{position:relative;z-index:1;padding:0 40px}
+.cover-kicker{font-family:'Libre Franklin',sans-serif;font-style:italic;font-size:.95rem;color:var(--sky);margin-bottom:18px}
+.cover-title{font-size:clamp(2rem,4.5vw,3rem);font-weight:900;color:#fff;letter-spacing:-0.02em;margin-bottom:14px}
+.cover-sub{color:rgba(255,255,255,.6);font-size:1.05rem;max-width:56ch}
+
+/* ===== SECTIONS ===== */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section:last-child{border-bottom:none}
+.eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+h2{font-size:1.6rem;font-weight:800;margin-bottom:12px}
+.lede{max-width:64ch;margin-bottom:40px;font-size:1rem}
+
+/* ===== LOGO ===== */
+.logo-demo{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:24px}
+.logo-panel{padding:56px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.logo-panel.light{background:#fff}
+.logo-panel.dark{background:var(--dark)}
+.wordmark{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.1rem;display:flex;align-items:baseline;line-height:1}
+.wordmark .zero{color:var(--blue);margin-right:10px}
+.wordmark .trace{color:var(--ink)}
+.logo-panel.dark .wordmark .trace{color:#fff}
+.wordmark .tm{font-size:.24em;font-weight:700;display:inline-block;vertical-align:super;color:rgba(0,0,0,.35);margin-left:3px;transform:translateY(-2.6em)}
+.logo-panel.dark .wordmark .tm{color:rgba(255,255,255,.4)}
+.logo-tag{font-family:'Libre Franklin',sans-serif;font-style:italic;font-size:.95rem;color:var(--muted)}
+.logo-panel.dark .logo-tag{color:rgba(255,255,255,.5)}
+.logo-note{font-size:.85rem;color:var(--muted);max-width:60ch}
+
+/* ===== FAVICON ===== */
+.mark-row{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-bottom:20px}
+.mark{border-radius:22%;background:var(--blue);display:flex;align-items:center;justify-content:center}
+.mark svg{stroke:#fff;fill:none;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}
+.mark-label{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.78rem;color:var(--muted);margin-top:8px;text-align:center}
+.mark-item{display:flex;flex-direction:column;align-items:center}
+
+/* ===== COLOR ===== */
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.swatch{border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.swatch-color{height:88px}
+.swatch-info{background:#fff;padding:14px 16px}
+.swatch-name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--ink)}
+.swatch-hex{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;color:var(--muted);margin-top:2px}
+
+/* ===== TYPE ===== */
+.type-sample{margin-bottom:32px}
+.type-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.type-display{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.4rem;color:var(--ink);letter-spacing:-0.02em;margin-bottom:6px}
+.type-weights{display:flex;gap:20px;flex-wrap:wrap;margin-top:14px}
+.type-weights span{font-family:'Montserrat',sans-serif;font-size:1.1rem;color:var(--ink)}
+.type-body{font-family:'Libre Franklin',sans-serif;font-size:1.05rem;color:var(--muted);max-width:60ch}
+.type-italic{font-family:'Libre Franklin',sans-serif;font-style:italic;font-size:1.15rem;color:var(--blue);margin-top:10px}
+
+/* ===== USAGE ===== */
+.usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.usage-col h3{font-size:1rem;margin-bottom:12px}
+.usage-col.do h3{color:#2D8A56}
+.usage-col.dont h3{color:#C0392B}
+.usage-col ul{list-style:none}
+.usage-col li{font-size:.92rem;padding:8px 0;border-bottom:1px solid var(--line)}
+
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.8rem}
+
+@media print{
+  body{background:#fff}
+  .cover{background:var(--dark)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{break-inside:avoid}
+}
+@media(max-width:640px){
+  .logo-demo,.usage-grid{grid-template-columns:1fr}
+  .wrap{padding:48px 24px 72px}
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <div class="cover-kicker">Brand Guide</div>
+    <div class="cover-title">Zero Trace Pro Cleaning</div>
+    <p class="cover-sub">A quick reference for the logo, colors, and typography used across the website and marketing materials — everything here matches what's live on zerotraceprocleaning.com.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="eyebrow">Logo</div>
+  <h2>The Wordmark</h2>
+  <p class="lede">The logo is a custom lockup, not a font-generated wordmark: "ZERO" is always brand blue, "TRACE" switches between dark ink and white depending on background, and the "TM" mark sits tucked against the top of the last letter.</p>
+  <div class="logo-demo">
+    <div class="logo-panel light">
+      <div class="wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">TM</span></div>
+      <div class="logo-tag">keeping it spotless</div>
+    </div>
+    <div class="logo-panel dark">
+      <div class="wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">TM</span></div>
+      <div class="logo-tag">keeping it spotless</div>
+    </div>
+  </div>
+  <p class="logo-note">Use the light-background version on white/cream surfaces, and the dark-background version on navy or photo backgrounds. Don't recolor "ZERO" — it's always the brand blue, never black, white, or gray.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Icon Mark</div>
+  <h2>Favicon &amp; App Icon</h2>
+  <p class="lede">A simplified "Z" mark for browser tabs, phone home-screen icons, and anywhere the full wordmark is too small to read clearly.</p>
+  <div class="mark-row">
+    <div class="mark-item">
+      <div class="mark" style="width:80px;height:80px"><svg viewBox="0 0 64 64" width="34" height="34"><path d="M18 20h28l-19 24h19"/></svg></div>
+      <div class="mark-label">Large (app icon)</div>
+    </div>
+    <div class="mark-item">
+      <div class="mark" style="width:48px;height:48px"><svg viewBox="0 0 64 64" width="20" height="20"><path d="M18 20h28l-19 24h19"/></svg></div>
+      <div class="mark-label">Medium</div>
+    </div>
+    <div class="mark-item">
+      <div class="mark" style="width:32px;height:32px"><svg viewBox="0 0 64 64" width="14" height="14"><path d="M18 20h28l-19 24h19"/></svg></div>
+      <div class="mark-label">Favicon (32px)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Color Palette</div>
+  <h2>Brand Colors</h2>
+  <p class="lede">Blue is the primary brand color — it should always read as the most saturated color on the page. Navy is reserved for dark sections (hero, footer). The neutrals are cool-toned on purpose, not warm/cream.</p>
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#1B65CE"></div>
+      <div class="swatch-info"><div class="swatch-name">Brand Blue</div><div class="swatch-hex">#1B65CE</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#144FA0"></div>
+      <div class="swatch-info"><div class="swatch-name">Deep Blue</div><div class="swatch-hex">#144FA0</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#4A90D9"></div>
+      <div class="swatch-info"><div class="swatch-name">Sky</div><div class="swatch-hex">#4A90D9</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#0a1628"></div>
+      <div class="swatch-info"><div class="swatch-name">Navy (dark sections)</div><div class="swatch-hex">#0A1628</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#12181D"></div>
+      <div class="swatch-info"><div class="swatch-name">Ink (headings)</div><div class="swatch-hex">#12181D</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#4B565E"></div>
+      <div class="swatch-info"><div class="swatch-name">Body Text</div><div class="swatch-hex">#4B565E</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#F4F6F8;border-bottom:1px solid #e5e5e5"></div>
+      <div class="swatch-info"><div class="swatch-name">Paper (page bg)</div><div class="swatch-hex">#F4F6F8</div></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#EAEEF2;border-bottom:1px solid #e5e5e5"></div>
+      <div class="swatch-info"><div class="swatch-name">Paper Alt</div><div class="swatch-hex">#EAEEF2</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Typography</div>
+  <h2>Type System</h2>
+  <p class="lede">Two typefaces, each with one job: Montserrat for anything bold and structural (headings, buttons, labels), Libre Franklin for anything meant to be read at length (paragraphs, descriptions).</p>
+
+  <div class="type-sample">
+    <div class="type-label">Montserrat — Headings &amp; Labels</div>
+    <div class="type-display">Professional Clean.</div>
+    <div class="type-weights">
+      <span style="font-weight:500">Medium</span>
+      <span style="font-weight:600">Semibold</span>
+      <span style="font-weight:700">Bold</span>
+      <span style="font-weight:800">Extrabold</span>
+      <span style="font-weight:900">Black</span>
+    </div>
+  </div>
+
+  <div class="type-sample">
+    <div class="type-label">Libre Franklin — Body Copy</div>
+    <p class="type-body">Reliable, detail-driven, and eco-friendly commercial cleaning services for medical facilities, offices, and businesses across Indianapolis.</p>
+    <div class="type-italic">keeping it spotless</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Usage</div>
+  <h2>Do &amp; Don't</h2>
+  <div class="usage-grid">
+    <div class="usage-col do">
+      <h3>Do</h3>
+      <ul>
+        <li>Keep clear space around the logo — don't crowd it against edges or other elements</li>
+        <li>Use the dark-background version on photos or navy sections</li>
+        <li>Keep "ZERO" in brand blue, always</li>
+      </ul>
+    </div>
+    <div class="usage-col dont">
+      <h3>Don't</h3>
+      <ul>
+        <li>Stretch, skew, or resize the wordmark disproportionately</li>
+        <li>Recolor the logo outside the brand palette</li>
+        <li>Place the light-background logo on a busy or low-contrast photo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>Zero Trace Pro Cleaning LLC · brand reference · matches zerotraceprocleaning.com</footer>
+
+</body>
+</html>
