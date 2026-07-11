@@ -83,6 +83,17 @@ h2{font-weight:800;font-size:clamp(1.7rem,3.3vw,2.5rem);letter-spacing:-0.02em;t
 .nav.scrolled .wordmark .trace{color:var(--ink)}
 .wordmark .tm{font-size:.24em;font-weight:700;display:inline-block;vertical-align:super;color:rgba(255,255,255,.4);margin-left:2px;letter-spacing:.03em;transform:translateY(-2.6em);transition:color .4s}
 .nav.scrolled .wordmark .tm{color:var(--muted)}
+.logo{display:inline-flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none}
+.logo .wordmark{justify-content:center}
+.prolabel{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.5rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.prolabel b{font-weight:700;padding-left:.3em}
+.prolabel i{flex:none;width:22px;height:1.5px;border-radius:1px;background:var(--blue)}
+.prolabel.on-dark{color:#EAEEF2}
+.prolabel.on-dark i{background:rgba(255,255,255,.55)}
+.nav .prolabel{color:rgba(234,238,242,.9)}
+.nav .prolabel i{background:rgba(255,255,255,.5)}
+.nav.scrolled .prolabel{color:var(--muted)}
+.nav.scrolled .prolabel i{background:var(--blue)}
 .nav-links{display:flex;align-items:center;gap:34px;list-style:none}
 .nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.03em;color:rgba(255,255,255,.75);transition:color .3s}
 .nav.scrolled .nav-links a{color:var(--muted)}
@@ -276,7 +287,10 @@ h2{font-weight:800;font-size:clamp(1.7rem,3.3vw,2.5rem);letter-spacing:-0.02em;t
 <!-- NAV -->
 <nav class="nav" id="nb">
 <div class="container nav-inner">
-  <a href="#home" class="wordmark" aria-label="Zero Trace Pro Cleaning home"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">TM</span></a>
+  <a href="#home" class="logo" aria-label="Zero Trace Pro Cleaning home">
+    <span class="wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">TM</span></span>
+    <span class="prolabel"><i></i><b>Pro Cleaning</b><i></i></span>
+  </a>
   <ul class="nav-links" id="nl">
     <li><a href="#services">Services</a></li>
     <li><a href="#medical">Medical</a></li>
@@ -508,7 +522,10 @@ h2{font-weight:800;font-size:clamp(1.7rem,3.3vw,2.5rem);letter-spacing:-0.02em;t
 <div class="container">
   <div class="ft-top">
     <div>
-      <div class="wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">TM</span></div>
+      <div class="logo">
+        <div class="wordmark"><span class="zero">ZERO</span><span class="trace">TRACE</span><span class="tm">TM</span></div>
+        <div class="prolabel on-dark"><i></i><b>Pro Cleaning</b><i></i></div>
+      </div>
       <div class="ft-tagline">keeping it spotless</div>
       <div class="ft-social" style="margin-top:20px">
         <a href="https://www.instagram.com/zerotraceprocleaning" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
